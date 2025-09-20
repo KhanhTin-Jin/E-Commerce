@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Il/5rFhyJaA=",
+  "dgSpecHash": "YnUWHSRD2BQ=",
   "success": true,
-  "projectFilePath": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\ECommerceAPI.csproj",
+  "projectFilePath": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\E-Commerce\\ecommerce-api\\ECommerceAPI\\ECommerceAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\khanh\\.nuget\\packages\\cloudinarydotnet\\1.27.7\\cloudinarydotnet.1.27.7.nupkg.sha512",
     "C:\\Users\\khanh\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
