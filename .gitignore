@@ -1,0 +1,10 @@
+# .NET
+api/**/bin/
+api/**/obj/
+*.user
+*.suo
+
+# Node/Vite
+frontend/node_modules/
+frontend/dist/
+.env*

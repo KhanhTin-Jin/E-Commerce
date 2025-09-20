@@ -1,0 +1,138 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|d:\\fpt fall 2025 semeter8\\prn232\\assignment\\ecommerceapi\\ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|d:\\fpt fall 2025 semeter8\\prn232\\assignment\\ecommerceapi\\ecommerceapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|d:\\fpt fall 2025 semeter8\\prn232\\assignment\\ecommerceapi\\ecommerceapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|d:\\fpt fall 2025 semeter8\\prn232\\assignment\\ecommerceapi\\ecommerceapi\\dtos\\productdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\dtos\\productdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|d:\\fpt fall 2025 semeter8\\prn232\\assignment\\ecommerceapi\\ecommerceapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|d:\\fpt fall 2025 semeter8\\prn232\\assignment\\ecommerceapi\\ecommerceapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|d:\\fpt fall 2025 semeter8\\prn232\\assignment\\ecommerceapi\\ecommerceapi\\migrations\\20250919110743_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C79863-9F37-4360-9D5B-8DCB97330DD3}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\migrations\\20250919110743_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ECommerceAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-19T16:19:43.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductDtos.cs",
+              "DocumentMoniker": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\DTOs\\ProductDtos.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\DTOs\\ProductDtos.cs",
+              "ToolTip": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\DTOs\\ProductDtos.cs",
+              "RelativeToolTip": "ECommerceAPI\\DTOs\\ProductDtos.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T11:18:24.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250919110743_InitialCreate.cs",
+              "DocumentMoniker": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Migrations\\20250919110743_InitialCreate.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Migrations\\20250919110743_InitialCreate.cs",
+              "ToolTip": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Migrations\\20250919110743_InitialCreate.cs",
+              "RelativeToolTip": "ECommerceAPI\\Migrations\\20250919110743_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T11:07:43.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Program.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Program.cs",
+              "ToolTip": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Program.cs",
+              "RelativeToolTip": "ECommerceAPI\\Program.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T11:04:52.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "ECommerceAPI\\appsettings.json",
+              "ToolTip": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\appsettings.json",
+              "RelativeToolTip": "ECommerceAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-19T11:04:28.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "ECommerceAPI\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T11:04:07.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\Product.cs",
+              "ToolTip": "D:\\FPT Fall 2025 Semeter8\\PRN232\\Assignment\\ECommerceAPI\\ECommerceAPI\\Models\\Product.cs",
+              "RelativeToolTip": "ECommerceAPI\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T11:03:20.076Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

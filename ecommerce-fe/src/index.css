@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Theme tokens (Light / Dark) ===== */
+:root {
+  /* Light palette */
+  --bg:   #f7f7f7;
+  --card: #ffffff;
+  --soft: #f2f2f2;
+  --line: #e5e7eb;
+  --text: #0a0a0a;
+  --mute: #6b7280;
+}
+html.dark {
+  /* Dark palette */
+  --bg:   #0a0a0a;
+  --card: #121212;
+  --soft: #1b1b1b;
+  --line: #262626;
+  --text: #e6e6e6;
+  --mute: #a3a3a3;
+}
+
+.bg-base-bg    { background-color: var(--bg) !important; }
+.bg-base-card  { background-color: var(--card) !important; }
+.bg-base-soft  { background-color: var(--soft) !important; }
+.border-base-line { border-color: var(--line) !important; }
+.text-base-text { color: var(--text) !important; }
+.text-base-mute { color: var(--mute) !important; }
+
+
+*::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 999px;
+}
+
+* {
+  scrollbar-width: thin;              /* Firefox */
+  scrollbar-color: #2a2a2a transparent;
+}
+
+/* Sparkle cursor */
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,0.95), rgba(255,255,255,0) 65%);
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.35));
+  border-radius: 999px;
+  animation: sparkle-pop 700ms ease-out forwards;
+  z-index: 9999;
+}
+@keyframes sparkle-pop {
+  from { transform: translate(-50%, -50%) scale(1); opacity: 0.95; }
+  to   { transform: translate(-50%, -120%) scale(0.4); opacity: 0; }
+}
+.card-hover:hover { box-shadow: 0 0 0 1px var(--line) inset; }
+
+:root {
+  /* ...các biến màu hiện có... */
+  /* Sparkle cho LIGHT: dùng màu tối + blend multiply để hiện trên nền sáng */
+  --sparkle-core: rgba(17, 24, 39, 0.35);   /* xám đậm */
+  --sparkle-glow: rgba(59, 130, 246, 0.25); /* ánh xanh nhạt */
+  --sparkle-blend: multiply;
+}
+html.dark {
+  /* Sparkle cho DARK: dùng màu trắng + blend screen để nổi bật */
+  --sparkle-core: rgba(255, 255, 255, 0.95);
+  --sparkle-glow: rgba(255, 255, 255, 0.35);
+  --sparkle-blend: screen;
+}
+
+/* Sparkle cursor */
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  width: 10px; height: 10px;          /* kích thước sẽ bị override bằng inline style từ JS */
+  background: radial-gradient(circle, var(--sparkle-core), rgba(255,255,255,0) 65%);
+  filter: drop-shadow(0 0 8px var(--sparkle-glow));
+  mix-blend-mode: var(--sparkle-blend);
+  border-radius: 999px;
+  animation: sparkle-pop 700ms ease-out forwards;
+  will-change: transform, opacity;
+  z-index: 9999;
+}
+@keyframes sparkle-pop {
+  from { transform: translate(-50%, -50%) scale(1);    opacity: 0.9; }
+  to   { transform: translate(-50%, -120%) scale(0.4); opacity: 0; }
+}
