@@ -1,4 +1,4 @@
-﻿﻿using ECommerceAPI.Data;
+﻿using ECommerceAPI.Data;
 using ECommerceAPI.DTOs;
 using ECommerceAPI.Models;
 using Microsoft.EntityFrameworkCore;
@@ -9,13 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 2) CORS: đọc danh sách origin từ cấu hình (hoặc cho phép tất cả nếu chưa cấu hình)
+// 2) CORS (đọc Origins từ config/ENV; nếu rỗng thì chỉ AllowAll khi Development)
 var origins = builder.Configuration.GetSection("Cors:Origins").Get<string[]>() ?? Array.Empty<string>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Frontend", p =>
     {
-        if (origins.Length > 0)
+        if (origins.Length > 0 || !builder.Environment.IsDevelopment())
             p.WithOrigins(origins).AllowAnyHeader().AllowAnyMethod();
         else
             p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod(); // dev nhanh
@@ -27,27 +27,46 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// 3) Auto-migrate
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
-}
+// 3) Middlewares
+app.UseCors("Frontend");
 
-// 4) Middlewares
-app.UseCors("Frontend"); // <-- đặt SAU khi build app, TRƯỚC khi map endpoints
-
-var enableSwagger = app.Environment.IsDevelopment() || builder.Configuration.GetValue<bool>("EnableSwagger");
+// Bật Swagger SỚM để luôn truy cập được
+var enableSwagger = app.Environment.IsDevelopment() || app.Configuration.GetValue<bool>("EnableSwagger");
 if (enableSwagger)
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// Nếu deploy lên Render mà gặp redirect loop, có thể tạm comment dòng này.
+// KHÔNG bắt buộc trên Render (tránh redirect loop). Bật nếu bạn chắc chắn dùng HTTPS reverse proxy.
 // app.UseHttpsRedirection();
 
-// 5) Endpoints
+// 4) Auto-migrate AN TOÀN (không làm sập app nếu thiếu connection / migrate fail)
+var conn = app.Configuration.GetConnectionString("DefaultConnection");
+if (string.IsNullOrWhiteSpace(conn))
+{
+    app.Logger.LogWarning("DefaultConnection is empty; skipping EF migrations.");
+}
+else
+{
+    try
+    {
+        using var scope = app.Services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        db.Database.Migrate();
+        app.Logger.LogInformation("EF migrations applied successfully.");
+    }
+    catch (Exception ex)
+    {
+        app.Logger.LogError(ex, "EF migrations failed at startup; continuing without DB.");
+        // KHÔNG throw; để còn vào /swagger debug
+    }
+}
+
+// 5) Healthcheck đơn giản
+app.MapGet("/healthz", () => Results.Ok(new { ok = true, env = app.Environment.EnvironmentName }));
+
+// 6) Endpoints
 
 // GET all products
 app.MapGet("/api/products", async (AppDbContext db) =>
