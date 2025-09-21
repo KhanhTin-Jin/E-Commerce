@@ -1,5 +1,6 @@
-// Dùng HTTP đúng port 5171
-const BASE_URL = 'http://localhost:5171';
+// src/lib/api.js
+// Đọc base từ ENV, fallback về localhost khi dev.
+const BASE_URL = (import.meta.env.VITE_API_BASE || 'http://localhost:5171').replace(/\/$/, '');
 
 async function http(path, { method = 'GET', data } = {}) {
   const res = await fetch(`${BASE_URL}${path}`, {
@@ -13,7 +14,7 @@ async function http(path, { method = 'GET', data } = {}) {
     throw new Error(text || `HTTP ${res.status}`);
   }
 
-  // Tránh lỗi khi body rỗng (vd: DELETE 200 không nội dung)
+  // Tránh lỗi khi body rỗng (vd: DELETE 204)
   const text = await res.text();
   return text ? JSON.parse(text) : null;
 }

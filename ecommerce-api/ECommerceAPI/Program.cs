@@ -5,31 +5,49 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
+// 1) DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// 2) CORS: đọc danh sách origin từ cấu hình (hoặc cho phép tất cả nếu chưa cấu hình)
+var origins = builder.Configuration.GetSection("Cors:Origins").Get<string[]>() ?? Array.Empty<string>();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+    options.AddPolicy("Frontend", p =>
+    {
+        if (origins.Length > 0)
+            p.WithOrigins(origins).AllowAnyHeader().AllowAnyMethod();
+        else
+            p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod(); // dev nhanh
+    });
 });
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(); // Optional cho test API
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseCors("AllowAll");
+// 3) Auto-migrate
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
 
-if (app.Environment.IsDevelopment())
+// 4) Middlewares
+app.UseCors("Frontend"); // <-- đặt SAU khi build app, TRƯỚC khi map endpoints
+
+var enableSwagger = app.Environment.IsDevelopment() || builder.Configuration.GetValue<bool>("EnableSwagger");
+if (enableSwagger)
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Nếu deploy lên Render mà gặp redirect loop, có thể tạm comment dòng này.
+// app.UseHttpsRedirection();
 
-// Updated endpoints using DTOs
+// 5) Endpoints
 
 // GET all products
 app.MapGet("/api/products", async (AppDbContext db) =>
