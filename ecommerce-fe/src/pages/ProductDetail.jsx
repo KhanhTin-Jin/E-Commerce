@@ -69,7 +69,7 @@ export default function ProductDetail() {
 
           <div className="space-y-3">
             <h1 className="text-2xl font-semibold">{item.name}</h1>
-            <div className="text-sm text-base-mute break-all">{item.id}</div>
+            {/* <div className="text-sm text-base-mute break-all">{item.id}</div> */}
             <div className="text-2xl font-semibold">
               {Intl.NumberFormat('vi-VN').format(item.price)}₫
             </div>
