@@ -35,6 +35,9 @@ export const dict = {
     updatedErr: 'Cập nhật thất bại',
     deletedOk: 'Đã xoá',
     deletedErr: 'Xoá thất bại',
+    detail: 'Chi tiết',
+    back: 'Trở về',
+    notFound: 'Không tìm thấy sản phẩm',
   },
   en: {
     title: 'E-Commerce',
@@ -72,6 +75,9 @@ export const dict = {
     updatedErr: 'Update failed',
     deletedOk: 'Deleted',
     deletedErr: 'Delete failed',
+    detail: 'Detail',
+    back: 'Back',
+    notFound: 'Product not found',
   }
 }
 

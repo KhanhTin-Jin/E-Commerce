@@ -1,4 +1,5 @@
 import { Button, Card } from './Kit'
+import { Link } from 'react-router-dom'
 
 export default function ProductTable({ t, items, onEdit, onDelete }) {
   return (
@@ -34,7 +35,13 @@ export default function ProductTable({ t, items, onEdit, onDelete }) {
                 </td>
                 <td className="px-4 py-3">{Intl.NumberFormat('vi-VN').format(p.price)}</td>
                 <td className="px-4 py-3">
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 flex-wrap">
+                    <Link
+                      to={`/products/${p.id}`}
+                      className="px-4 py-2 rounded-xl transition-all duration-200 active:scale-[.98] bg-base-soft hover:bg-base-card text-base-text border border-base-line"
+                    >
+                      {t('detail')}
+                    </Link>
                     <Button variant="ghost" onClick={() => onEdit(p)}>{t('edit')}</Button>
                     <Button variant="danger" onClick={() => onDelete(p)}>{t('delete')}</Button>
                   </div>
